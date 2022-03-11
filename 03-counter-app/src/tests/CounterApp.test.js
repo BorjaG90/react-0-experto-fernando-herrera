@@ -5,9 +5,13 @@ import { shallow } from 'enzyme';
 import CounterApp from '../CounterApp';
 
 describe('Pruebas en <CounterApp />', () => {
-  test('debe de mostrar el <CounterApp /> correctamente', () => {
-    const wrapper = shallow( <CounterApp />);
+  let wrapper = shallow( <CounterApp />);
 
+  beforeEach(() => {
+    wrapper = shallow( <CounterApp />);
+  });
+
+  test('debe de mostrar el <CounterApp /> correctamente', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -15,8 +19,23 @@ describe('Pruebas en <CounterApp />', () => {
     const wrapper = shallow(
       <CounterApp value={100} />
     );
-    const counterText = parseInt(wrapper.find('h2').text().trim());
+    const counterText = wrapper.find('h2').text().trim();
 
-    expect(counterText).toBe(100);
+    expect(counterText).toBe('100');
+  });
+
+  test('debe de incrementar con el botón "+1', () => {
+    wrapper.find('button').at(0).simulate('click', {});
+    const counterText = wrapper.find('h2').text().trim();
+
+    expect(counterText).toBe('11');
+  });
+
+  test('debe de decrementar con el botón "-1', () => {
+
+    wrapper.find('button').at(2).simulate('click', {});
+    const counterText = wrapper.find('h2').text().trim();
+
+    expect(counterText).toBe('9');
   });
 });
