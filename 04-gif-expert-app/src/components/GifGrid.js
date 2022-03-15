@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export const GifGrid = ({ category }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect( () => {
+      getGifs();
+  }, []); // componentDidMount
+
   const getGifs = async () => {
     const url = 'https://api.giphy.com/v1/gifs/search?q=Rick%20%26%20Morty&limit=10&api_key=B20j9iunukSNMktQHeyg0mZHZHMP3BWl'
     const resp = await fetch(url);
@@ -12,13 +18,17 @@ export const GifGrid = ({ category }) => {
         url: img.images?.downsized_medium.url
       }
     });
+
+    console.log(gifs);
   };
 
-  getGifs();
+  // getGifs();
 
   return (
     <div>
       <h3>{category}</h3>
+      <h3>{count}</h3>
+      <button onClick={() => setCount(count +1)}></button>
     </div>
   )
 }
