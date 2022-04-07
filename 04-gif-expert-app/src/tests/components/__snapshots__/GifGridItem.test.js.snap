@@ -4,7 +4,12 @@ exports[`Pruebas en <GifGridItem /> should de mostrar el componente correctament
 <div
   className="card animate__animated animate__bounce"
 >
-  <img />
-  <p />
+  <img
+    alt="Un título"
+    src="http://localhost/algo.jpg"
+  />
+  <p>
+    Un título
+  </p>
 </div>
 `;
