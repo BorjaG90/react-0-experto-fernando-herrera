@@ -30,7 +30,7 @@ describe('Pruebas en <AddCategory />', () => {
     expect(setCategories).not.toHaveBeenCalled();
   });
 
-  test('should llamar el setCategories y limpiar la caja de texto', () => { 
+  test('debe llamar el setCategories y limpiar la caja de texto', () => { 
     const input = wrapper.find('input');
     const value = 'Valor de prueba';
     // Simular el inputChange
