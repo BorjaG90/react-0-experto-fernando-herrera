@@ -9,7 +9,8 @@ import ReactDOM from 'react-dom/client';
 // import { MultipleCustomHooks } from './components/03-examples/MultipleCustomHooks';
 // import { FocusScreen } from './components/04-useRef/FocusScreen';
 // import { RealExampleRef } from './components/04-useRef/RealExampleRef';
-import { LayoutEffect } from './components/05-useLayoutEffect/LayoutEffect';
+// import { LayoutEffect } from './components/05-useLayoutEffect/LayoutEffect';
+import { Memorize } from './components/06-memos/Memorize';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( <LayoutEffect /> );
+root.render( <Memorize /> );
