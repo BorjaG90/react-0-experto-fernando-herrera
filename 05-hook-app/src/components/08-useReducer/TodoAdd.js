@@ -24,7 +24,7 @@ export const TodoAdd = ({handleAddTodo}) => {
 
   return (
     <>
-      <h4>Agergar ToDo</h4>
+      <h4>Agregar ToDo</h4>
       <hr />
       <form
         className='d-grid gap-2'
