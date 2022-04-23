@@ -1,25 +1,44 @@
-import React, { useReducer } from 'react';
+import React, { useEffect, useReducer } from 'react';
 import { todoReducer } from './todoReducer';
+import { useForm } from '../../hooks/useForm';
 
 import './styles.css';
 
+const init = () => {
+  // return [{
+  //   id: new Date().getTime(),
+  //   desc: 'Aprender React',
+  //   done: false
+  // }];
+  
+  return JSON.parse(localStorage.getItem('todos')) || [];
+}
+
 export const TodoApp = () => {
-  const initialState = [{
-    id: new Date().getTime(),
-    desc: 'Aprender React',
-    done: false
-  }]
 
-  const [todos, dispatch] = useReducer(todoReducer, initialState);
+  const [todos, dispatch] = useReducer(todoReducer, [], init);
 
-  console.log(todos);
+  const [{description}, handleInputChange, reset] = useForm({
+    description: ''
+  });
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos])
+  
+
+  console.log(description);
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if(description.trim().length <=1) {
+      return;
+    }
+
     const newTodo = {
       id: new Date().getTime(),
-      desc: 'Nueva tarea',
+      desc: description,
       done: false
     };
 
@@ -27,8 +46,9 @@ export const TodoApp = () => {
       type: 'add',
       payload: newTodo
     };
-    
+
     dispatch(action);
+    reset();
   }
 
   return (
@@ -56,7 +76,6 @@ export const TodoApp = () => {
           <h4>Agergar ToDo</h4>
           <hr />
           <form
-            action=""
             className='d-grid gap-2'
             onSubmit={handleSubmit}
           >
@@ -66,6 +85,8 @@ export const TodoApp = () => {
               className='form-control'
               placeholder='Aprender...'
               autoComplete='off'
+              value={description}
+              onChange={handleInputChange}
             />
 
             <button
