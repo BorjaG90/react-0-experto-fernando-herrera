@@ -7,10 +7,10 @@ jest.mock('../../hooks/useFetch');
 jest.mock('../../hooks/useCounter');
 
 describe('pruebas en <MultipleCustomHooks />', () => {
-  useCounter.mockReturnValue({
-    counter: 10,
+  beforeEach(() => useCounter.mockReturnValue({
+    counter: 1,
     increment: () => {}
-  });
+  }));
 
   test('debe de mostrarse correctamente', () => { 
     useFetch.mockReturnValue({
