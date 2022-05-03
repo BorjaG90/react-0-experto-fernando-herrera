@@ -14,7 +14,7 @@ describe('Pruebas sobre <HomeScreen />', () => {
     </UserContext.Provider>
   );
 
-  test('should de mostrarse correctamente', () => {
+  test('debe de mostrarse correctamente', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
