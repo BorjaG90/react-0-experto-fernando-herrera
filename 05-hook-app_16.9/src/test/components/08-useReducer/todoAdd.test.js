@@ -23,7 +23,7 @@ describe('Pruebas en <TodoAdd />', () => {
     expect(handleAddTodo).toHaveBeenCalledTimes(0);
   });
 
-  test('should de llamar a la funcion handleAddTodo', () => {
+  test('debe de llamar a la funcion handleAddTodo', () => {
     const value = 'Prueba';
 
     wrapper.find('input').simulate('change', {
