@@ -1,7 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { TodoAdd } from '../../../components/08-useReducer/TodoAdd';
-import { demoTodos } from '../../fixtures/demoTodos';
 
 describe('Pruebas en <TodoAdd />', () => {
   const handleAddTodo = jest.fn();
