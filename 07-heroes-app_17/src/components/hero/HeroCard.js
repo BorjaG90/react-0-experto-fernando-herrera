@@ -11,7 +11,7 @@ export const HeroCard = ({
   const imagePath = `/assets/img/${id}.jpg`
   return (
     <div className="col">
-      <card className="card">
+      <div className="card">
         <div className="row no-gutters">
           <div className="col-4">
             <img src={imagePath} alt={superhero} className="card-img" />
@@ -31,7 +31,7 @@ export const HeroCard = ({
             </div>
           </div>
         </div>
-      </card>
+      </div>
     </div>
   )
 }
