@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# necesario debido al uso de distintos artifactory de npm
+package-lock.json
