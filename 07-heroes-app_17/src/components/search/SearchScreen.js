@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import { useForm } from "../../hooks/useForm";
 import { getHeroesByName } from "../../selectors/getHeroesByName";
 import { HeroCard } from "../hero/HeroCard";
+import { useMemo } from "react";
 
 export const SearchScreen = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export const SearchScreen = () => {
     searchText: q,
   });
   const {searchText} = formValues;
-  const heroesFiltered = getHeroesByName(q);
+  const heroesFiltered = useMemo(() => getHeroesByName(q), [q]);
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -53,6 +54,14 @@ export const SearchScreen = () => {
       <div className="col-7">
         <h4>Resultados</h4>
         <hr />
+
+        {
+          (q === '')
+            ? <div className="alert alert-info">Buscar un heroé</div>
+            : (heroesFiltered.length === 0) 
+              && <div className="alert alert-danger">No hay resultados {q}</div>
+        }
+
         {
           heroesFiltered.map(hero => (
             <HeroCard
