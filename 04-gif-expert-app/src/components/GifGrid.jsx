@@ -1,13 +1,11 @@
-export const GifGrid = ({category, key}) => {
-  const gifs = [1,2,3,4,5]
+import { getGifs } from "../helpers/getGifs"
+
+export const GifGrid = ({category}) => {
 
   return (
     <>
       <h3>{category}</h3>
       {
-        gifs.map(gif => {
-          <p></p>
-        })
       }
     </>
   )
