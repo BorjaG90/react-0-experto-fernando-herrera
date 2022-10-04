@@ -20,8 +20,8 @@ export const CounterApp = () => {
         onClick={() => setCounter({
           ...state,
           counter1: counter1 +1
-        })
-        }>+1</button>
+        })}
+      >+1</button>
     </>
   )
 }
