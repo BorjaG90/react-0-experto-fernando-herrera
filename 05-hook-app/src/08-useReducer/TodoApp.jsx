@@ -1,5 +1,5 @@
-import { useTodos } from "../hooks/useTodos";
-import { TodoAdd , TodoList } from "./";
+import { useTodos } from '../hooks';
+import { TodoAdd , TodoList } from './';
 
 
 
