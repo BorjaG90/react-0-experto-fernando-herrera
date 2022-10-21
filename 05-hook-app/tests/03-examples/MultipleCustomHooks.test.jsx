@@ -16,7 +16,7 @@ describe('Pruebas en <MultipleCustomHooks/>', () => {
     jest.clearAllMocks();
   })
 
-  test('should de mostrar el componente por defecto', () => {
+  test('debe de mostrar el componente por defecto', () => {
     useFetch.mockReturnValue({data: null, isLoading: true, hasError: null});
     render(<MultipleCustomHooks />);
 
@@ -28,7 +28,7 @@ describe('Pruebas en <MultipleCustomHooks/>', () => {
     expect(nextButton.disabled).toBeTruthy();
   });
 
-  test('should de mostrar un quote', () => {
+  test('debe de mostrar un quote', () => {
     useFetch.mockReturnValue({
       data: [{author: 'Borja', quote: 'Hola mundo'}],
       isLoading: false,
@@ -44,7 +44,7 @@ describe('Pruebas en <MultipleCustomHooks/>', () => {
     expect(nextButton.disabled).toBeFalsy();
   });
 
-  test('should de llamar la función de incrementar', () => {
+  test('debe de llamar la función de incrementar', () => {
     useFetch.mockReturnValue({
       data: [{author: 'Borja', quote: 'Hola mundo'}],
       isLoading: false,
