@@ -7,7 +7,7 @@ describe('Pruebas en useForm hook', () => {
     email: 'bor@foo.com'
   };
 
-  test('should de regresar los valores por defecto', () => {
+  test('debe de regresar los valores por defecto', () => {
     const {result} = renderHook(() => useForm(initialForm));
     expect(result.current).toEqual({
       name: initialForm.name,
@@ -18,7 +18,7 @@ describe('Pruebas en useForm hook', () => {
     });
   });
 
-  test('should de cambiar el nombre del formulario', () => {
+  test('debe de cambiar el nombre del formulario', () => {
     const {result} = renderHook(() => useForm(initialForm));
     const {onInputChange} = result.current;
 
@@ -32,7 +32,7 @@ describe('Pruebas en useForm hook', () => {
     expect(result.current.formState.name).toBe(newValue);
   });
 
-  test('should de realizar el reset del formulario', () => {
+  test('debe de realizar el reset del formulario', () => {
     const {result} = renderHook(() => useForm(initialForm));
     const {onInputChange, onResetForm} = result.current;
 
