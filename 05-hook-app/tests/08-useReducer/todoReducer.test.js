@@ -7,12 +7,12 @@ describe('Pruebas en todoReducer', () => {
     done: false,
   }];
 
-  test('should de regresar el estado inicial', () => {
+  test('debe de regresar el estado inicial', () => {
     const newState = todoReducer(initialState, {});
     expect(newState).toBe(initialState);
   });
 
-  test('should de agregar un todo', () => {
+  test('debe de agregar un todo', () => {
     const action = {
       type: '[TODO] Add ToDo',
       payload: {
@@ -27,7 +27,7 @@ describe('Pruebas en todoReducer', () => {
     expect(newState).toContain(action.payload);
   });
 
-  test('should de eliminar un todo', () => {
+  test('debe de eliminar un todo', () => {
     const action = {
       type: '[TODO] Remove ToDo',
       payload: 1
@@ -37,7 +37,7 @@ describe('Pruebas en todoReducer', () => {
     expect(newState.length).toBe(0);
   });
 
-  test('should de realizar el toggle del todo', () => {
+  test('debe de realizar el toggle del todo', () => {
     const action = {
       type: '[TODO] Toggle ToDo',
       payload: 1
