@@ -17,9 +17,9 @@ describe('Pruebas en <TodoApp>', () => {
     handleNewTodo: jest.fn()
   });
 
-  test('should de mostrar el componente correctamente', () => {
+  test('debe de mostrar el componente correctamente', () => {
     render(<TodoApp />);
-    // screen.debug();
+
     expect(screen.getByText('Todo #1')).toBeTruthy();
     expect(screen.getByText('Todo #2')).toBeTruthy();
     expect(screen.getByRole('textbox')).toBeTruthy();
