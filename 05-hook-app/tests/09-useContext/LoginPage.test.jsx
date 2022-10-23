@@ -2,7 +2,7 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import { LoginPage } from '../../src/09-useContext';
 import { UserContext } from '../../src/09-useContext/context/UserContext';
 describe('Pruebas en <LoginPage>', () => {
-  test('should de mostrar el componente sin el usuario', () => {
+  test('debe de mostrar el componente sin el usuario', () => {
     render(
       <UserContext.Provider value={{user: null}}>
         <LoginPage />
@@ -14,7 +14,7 @@ describe('Pruebas en <LoginPage>', () => {
     expect(preTag.innerHTML).toBe('null');
   });
 
-  test('should de llamar al setUser cuando se hace el click', () => {
+  test('debe de llamar al setUser cuando se hace el click', () => {
     const setUserMock = jest.fn();
 
     render(
