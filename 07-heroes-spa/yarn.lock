@@ -290,6 +290,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@remix-run/router@1.0.3":
+  version "1.0.3"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@remix-run/router/-/router-1.0.3.tgz#953b88c20ea00d0eddaffdc1b115c08474aa295d"
+  integrity sha1-lTuIwg6gDQ7dr/3BsRXAhHSqKV0=
+
 "@types/prop-types@*":
   version "15.7.5"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
@@ -646,6 +651,21 @@ react-refresh@^0.14.0:
   version "0.14.0"
   resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/react-refresh/-/react-refresh-0.14.0.tgz#4e02825378a5f227079554d4284889354e5f553e"
   integrity sha1-TgKCU3il8icHlVTUKEiJNU5fVT4=
+
+react-router-dom@^6.4.3:
+  version "6.4.3"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/react-router-dom/-/react-router-dom-6.4.3.tgz#70093b5f65f85f1df9e5d4182eb7ff3a08299275"
+  integrity sha1-cAk7X2X4Xx355dQYLrf/OggpknU=
+  dependencies:
+    "@remix-run/router" "1.0.3"
+    react-router "6.4.3"
+
+react-router@6.4.3:
+  version "6.4.3"
+  resolved "https://globaldevtools.bbva.com/artifactory/api/npm/npm-repo/react-router/-/react-router-6.4.3.tgz#9ed3ee4d6e95889e9b075a5d63e29acc7def0d49"
+  integrity sha1-ntPuTW6ViJ6bB1pdY+KazH3vDUk=
+  dependencies:
+    "@remix-run/router" "1.0.3"
 
 react@^18.2.0:
   version "18.2.0"
