@@ -1,2 +1,3 @@
-export * from './getheroesByPublisher';
+export * from './getHeroesByPublisher';
 export * from './getHeroById';
+export * from './getHerosByName'

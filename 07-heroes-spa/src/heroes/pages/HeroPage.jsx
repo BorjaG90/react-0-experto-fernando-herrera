@@ -10,8 +10,8 @@ export const HeroPage = () => {
 
   const navigate = useNavigate();
   const onNavigateBack = () => {
-    navigate(`/${hero.id.split('-')[0]}`);
-    // navigate(-1);
+    // navigate(`/${hero.id.split('-')[0]}`);
+    navigate(-1);
   }
 
   if (!hero) {
