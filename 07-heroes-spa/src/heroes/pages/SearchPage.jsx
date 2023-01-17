@@ -35,13 +35,14 @@ export const SearchPage = () => {
         <div className="col-5">
           <h4>Searching</h4>
           <hr />
-          <form onSubmit={onSearchSubmit}>
+          <form onSubmit={onSearchSubmit} aria-label="form">
             <input
               type="text"
               placeholder="Search a hero"
               className="form-control"
               name="searchText"
               autoComplete="off"
+              value={searchText}
               onChange={onInputChange}
             />
           </form>
@@ -63,11 +64,13 @@ export const SearchPage = () => {
           }
 
           <div
+            aria-label="show-search"
             className="alert alert-primary animate__animated animate__fadeIn"
             style={{display: showSearch ? '' : 'none'}}
           >Search a Hero</div>
 
           <div
+            aria-label="show-error"
             className="alert alert-danger animate__animated animate__fadeIn"
             style={{display: showError ? '' : 'none'}}
           >No hero with <b>{q}</b></div>
