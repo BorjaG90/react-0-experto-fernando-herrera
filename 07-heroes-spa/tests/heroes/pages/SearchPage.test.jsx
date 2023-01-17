@@ -13,4 +13,24 @@ describe('Pruebas en <SearchPage />', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  test('debe de mostrar el resultado y el input con el valor de queryString', () => {
+    const heroValue = 'batman';
+
+    render(
+      <MemoryRouter initialEntries={[`/search?q=${heroValue}`]}>
+        <SearchPage />
+      </MemoryRouter>
+    );
+
+    const input = screen.getByRole('textbox');
+    expect(input.value).toBe(heroValue);
+
+    const img = screen.getByRole('img');
+    expect(img.src).toContain(heroValue);
+
+    const showError = screen.getByLabelText('show-error');
+    expect(showError.style.display).toBe('none');
+
+  });
 });

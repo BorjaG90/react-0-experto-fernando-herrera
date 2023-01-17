@@ -23,6 +23,7 @@ exports[`Pruebas en <SearchPage /> debe de mostrarse correctamente con valores p
           name="searchText"
           placeholder="Search a hero"
           type="text"
+          value=""
         />
       </form>
       <button
@@ -39,11 +40,13 @@ exports[`Pruebas en <SearchPage /> debe de mostrarse correctamente con valores p
       </h4>
       <hr />
       <div
+        aria-label="show-search"
         class="alert alert-primary animate__animated animate__fadeIn"
       >
         Search a Hero
       </div>
       <div
+        aria-label="show-error"
         class="alert alert-danger animate__animated animate__fadeIn"
         style="display: none;"
       >
