@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { increment } from './store/slices/counter';
+import { increment, decrement, incrementBy } from './store/slices/counter';
 
 import reactLogo from './assets/react.svg';
 import './App.css';
@@ -18,10 +18,16 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>count is {counter}</h1>
       <div className="card">
         <button onClick={() => dispatch(increment())}>
-          count is {counter}
+          Increment
+        </button>
+        <button onClick={() => dispatch(decrement())}>
+          Decrement
+        </button>
+        <button onClick={() => dispatch(incrementBy(2))}>
+          Increment by 2
         </button>
       </div>
     </div>
