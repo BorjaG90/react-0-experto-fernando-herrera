@@ -19,6 +19,8 @@ Curso de Udemy React: De cero a experto por Fernando Herrera <https://www.udemy.
 [<img allowed_elements src="https://raw.githubusercontent.com/github/explore/bbd48b997e8d0bef63f676eca4da5e1f76487b56/topics/javascript/javascript.png" width=50 alt="Javascript">][javascript-link]
 [<img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/reactJs.png" width=50 alt="react">][react-link]
 [<img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/bootstrap.png" width=50 alt="bootstrap">][bootstrap-link]
+[<img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/mui.png" width=50 alt="materialUI">][mui-link]
+[<img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/redux.png" width=50 alt="redux">][redux-link]
 
 ### Platforms
 
@@ -46,3 +48,5 @@ Curso de Udemy React: De cero a experto por Fernando Herrera <https://www.udemy.
 [javascript-link]: https://www.javascript.com/
 [react-link]: https://es.reactjs.org/
 [bootstrap-link]: https://getbootstrap.com/
+[mui-link]: https://mui.com/
+[redux-link]: https://es.redux.js.org/
