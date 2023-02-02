@@ -25,6 +25,7 @@ Curso de Udemy React: De cero a experto por Fernando Herrera <https://www.udemy.
 ### Platforms
 
 [<img src="https://raw.githubusercontent.com/github/explore/bbd48b997e8d0bef63f676eca4da5e1f76487b56/topics/visual-studio-code/visual-studio-code.png" width=50 alt="VSCode">][vscode-link]
+[<img src="https://raw.githubusercontent.com/BorjaG90/media/master/img/logos/firebase.png"  height=50 alt="firebase">][firebase-link]
 
 <div align="center">
 
@@ -50,3 +51,4 @@ Curso de Udemy React: De cero a experto por Fernando Herrera <https://www.udemy.
 [bootstrap-link]: https://getbootstrap.com/
 [mui-link]: https://mui.com/
 [redux-link]: https://es.redux.js.org/
+[firebase-link]: https://firebase.google.com/docs/
