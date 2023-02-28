@@ -1,48 +1,14 @@
-import { createSlice } from '@reduxjs/toolkit';
+export const startNewNote = () => {
+  return async(dispatch) => {
+    // uid
+    const newNote = {
+      title: '',
+      body: '',
+      date: new Date().getTime(),
+    }
 
-export const journalSlice = createSlice({
-  name: 'journal',
-  initialState: {
-    isSaving: true,
-    messageSaved: '',
-    notes: [],
-    active: null
-    // active: {
-    //   id: 'ABC123',
-    //   title: '',
-    //   body: '',
-    //   date: 123432,
-    //   imageUrls: [], //https://foto1.jpg...
-    // }
-  },
-  reducers: {
-    addNewEmptyNote: (state, action) => {
-
-    },
-    setActiveNote: (state, action) => {
-
-    },
-    setNotes: (state, action) => {
-
-    },
-    setSaving: (state, action) => {
-
-    },
-    updateNote: (state, action) => {
-
-    },
-    deleteNoteById: (state, action) => {
-
-    },
+    // dispatch
+    // dispatch(newNote)
+    // dispatch(activeNote)
   }
-});
-
-// Action creators are generated for each case reducer function
-export const { 
-  addNewEmptyNote,
-  setActiveNote,
-  setNotes,
-  setSaving,
-  updateNote,
-  deleteNoteById
-} = journalSlice.actions;
+}
