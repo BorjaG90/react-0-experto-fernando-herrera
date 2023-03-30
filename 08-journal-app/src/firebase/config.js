@@ -6,28 +6,26 @@ import { getEnviroments } from "../helpers";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-const env = getEnviroments();
-// Your web app's Firebase configuration
-// Dev/Prod
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDed5DS_t9kTaezHOgpBpeZJHyyjjbEjB8",
-//   authDomain: "react-fer-her.firebaseapp.com",
-//   projectId: "react-fer-her",
-//   storageBucket: "react-fer-her.appspot.com",
-//   messagingSenderId: "668090560685",
-//   appId: "1:668090560685:web:e6869c5b4968045ced9624"
-// };
+const {
+  VITE_APIKEY,
+  VITE_AUTHDOMAIN,
+  VITE_DATABASEURL,
+  VITE_PROJECTID,
+  VITE_STORAGEBUCKET,
+  VITE_MESSAGINGSENDERID,
+  VITE_APPID,
+  VITE_MEASUREMENTID
+} = getEnviroments();
 
-// Test
 const firebaseConfig = {
-  apiKey: "AIzaSyChyLPSBDu7wzQccWvE-tZoezVv2WPe6PM",
-  authDomain: "react-my-burger-a01b3.firebaseapp.com",
-  databaseURL: "https://react-my-burger-a01b3-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "react-my-burger-a01b3",
-  storageBucket: "react-my-burger-a01b3.appspot.com",
-  messagingSenderId: "729923226809",
-  appId: "1:729923226809:web:12bf8b1caea313536adf68",
-  measurementId: "G-159R130ZSV"
+  apiKey: VITE_APIKEY,
+  authDomain: VITE_AUTHDOMAIN,
+  databaseURL: VITE_DATABASEURL,
+  projectId: VITE_PROJECTID,
+  storageBucket: VITE_STORAGEBUCKET,
+  messagingSenderId: VITE_MESSAGINGSENDERID,
+  appId: VITE_APPID,
+  measurementId: VITE_MEASUREMENTID,
 };
 
 // Initialize Firebase
