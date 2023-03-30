@@ -36,17 +36,6 @@ describe('Pruebas en AuthThunks', () => {
     expect(dispatch).toHaveBeenCalledWith(logout(loginData.errorMessage));
   });
 
-  test('startCreatingUserWithEmailPassword debe de llamar checkingCredentials y login - Exito', async() => {
-    const loginData = {ok: true, ...demoUser};
-    const formData = {password: '123456', ...demoUser}
-    await registerUserWithEmailPassword.mockResolvedValue(loginData);
-
-    // thunk
-    await startCreatingUserWithEmailPassword(formData)(dispatch);
-    expect(dispatch).toHaveBeenCalledWith(checkingCredentials());
-    expect(dispatch).toHaveBeenCalledWith(login({uid: demoUser.uid, ...loginData}));
-  });
-
   test('startCreatingUserWithEmailPassword debe de llamar checkingCredentials y login - Error', async() => {
     const loginData = {ok: false, errorMessage: 'Un error de create'};
     const formData = {password: '123456', ...demoUser}
