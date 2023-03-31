@@ -1,6 +1,5 @@
 import 'whatwg-fetch';
 import 'setimmediate';
-import { getEnviroments } from './src/helpers';
 
 require('dotenv').config({
   path: '.env.test'
