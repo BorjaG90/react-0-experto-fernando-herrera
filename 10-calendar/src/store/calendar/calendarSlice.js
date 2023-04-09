@@ -13,6 +13,7 @@ const tempEvent = {
     name: 'Borja'
   }
 }
+
 export const calendarSlice = createSlice({
   name: 'calendar',
   initialState: {
