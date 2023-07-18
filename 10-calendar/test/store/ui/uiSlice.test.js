@@ -5,7 +5,7 @@ describe('Pruebas en uiSlice', () => {
     expect(uiSlice.getInitialState().isDateModalOpen).toBeFalsy();
   });
 
-  test('should de cambiar el isDateModalIOpen correctamente', () => {
+  test('debe de cambiar el isDateModalIOpen correctamente', () => {
     let state = uiSlice.getInitialState();
     state = uiSlice.reducer(state, onOpenDateModal());
     expect(state.isDateModalOpen).toBeTruthy();
