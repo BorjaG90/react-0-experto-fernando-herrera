@@ -3,4 +3,4 @@ export const testUserCredentials = {
   password: '123456',
   uid: '64b66c85c4a583e8749d8cbd',
   name: 'Test'
-}
+};

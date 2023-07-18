@@ -2,7 +2,7 @@ export const initialState = {
   status: 'checking',
   user: {},
   errorMessage: undefined,
-}
+};
 
 export const authenticatedState = {
   status: 'authenticated',
@@ -11,10 +11,10 @@ export const authenticatedState = {
     name: 'Borja'
   },
   errorMessage: undefined,
-}
+};
 
 export const notAuthenticatedState = {
   status: 'not-authenticated',
   user: {},
   errorMessage: undefined,
-}
+};
