@@ -22,10 +22,10 @@ describe('Pruebas en useUiStore', () => {
       wrapper: ({ children }) => <Provider store={mockStore}>{children}</Provider>
     } );
     expect(result.current).toEqual({
-        isDateModalOpen: false,
-        closeDateModal: expect.any(Function),
-        openDateModal: expect.any(Function),
-        toggleDateModal: expect.any(Function)
+      isDateModalOpen: false,
+      closeDateModal: expect.any(Function),
+      openDateModal: expect.any(Function),
+      toggleDateModal: expect.any(Function)
     });
   });
 
