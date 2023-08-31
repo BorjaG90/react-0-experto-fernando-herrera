@@ -5,7 +5,7 @@ import { useAuthStore } from '../hooks';
 import { useEffect } from 'react';
 
 export const AppRouter = () => {
-  const {status, checkAuthToken} =useAuthStore();
+  const {status, checkAuthToken} = useAuthStore();
 
   useEffect(() => {
     checkAuthToken()
