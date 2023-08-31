@@ -8,6 +8,10 @@
 
 Curso de Udemy React: De cero a experto por Fernando Herrera <https://www.udemy.com/course/react-cero-experto>
 
+[Certificado](https://www.udemy.com/certificate/UC-cd660a85-7190-4836-9de7-e029cb9f73e6/)
+
+![Diploma](https://raw.githubusercontent.com/BorjaG90/media/master/certificates/React0ExpertUdemy.png)
+
 </div>
 
 ---
