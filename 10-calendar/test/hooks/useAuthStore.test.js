@@ -2,10 +2,10 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import { act, renderHook, waitFor } from '@testing-library/react';
 import { useAuthStore } from '../../src/hooks/useAuthStore';
+import { calendarApi } from '../../src/api';
 import { authSlice } from '../../src/store';
 import { initialState, notAuthenticatedState } from '../fixtures/authStates';
 import { testUserCredentials } from '../fixtures/testUser';
-import { calendarApi } from '../../src/api';
 
 const getMockStore = ( initialState ) => {
   return configureStore({
@@ -112,5 +112,26 @@ describe('Pruebas en el useAuthStore', () => {
     });
 
     spy.mockRestore();
+  });
+
+  test('startRegister debe de fallar al crear un usuario', async() => {
+    const mockStore = getMockStore({ ...notAuthenticatedState });
+    const { result } = renderHook( () => useAuthStore(), {
+      wrapper: ({ children }) => <Provider store={mockStore}>{children}</Provider>
+    } );
+
+    await act(async() => {
+      await result.current.startRegister(testUserCredentials);
+    });
+    const { errorMessage, status, user } = result.current;
+
+    expect({errorMessage, status, user}).toEqual({
+      errorMessage: expect.any(String),
+      status: 'not-authenticated',
+      user: {}
+    });
+    waitFor(
+      () => expect( result.current.errorMessage ).toBeUndefined()
+    );
   });
 });
